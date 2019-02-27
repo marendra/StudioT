@@ -12,6 +12,8 @@ Resources:
       UserPoolName: !Sub ${AWS::StackName}-UserPool
       LambdaConfig:
         PostConfirmation: !GetAtt Function.Arn
+    Metadata:
+      StackeryName: PostSignup
   Function:
     Type: AWS::Serverless::Function
     Properties:
